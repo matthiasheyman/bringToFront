@@ -1,6 +1,6 @@
 {
   "name": "@matthey/bring-to-front",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Brings window with pid to foreground",
   "main": "index.js",
   "type": "module",
