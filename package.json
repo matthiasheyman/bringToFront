@@ -3,26 +3,44 @@
   "version": "0.0.1",
   "description": "brings window with pid to foreground",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "pretest": "node-gyp rebuild",
-    "test": "jest --watchAll",
+    "test": "xo && ava",
+    "release": "np",
     "build": "node-gyp build",
     "clean": "node-gyp clean && node-gyp configure",
-    "demo": "node sample.js"
+    "demo": "node sample.js",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "gypfile": true,
   "dependencies": {
-    "nan": "^2.14.0"
+    "nan": "^2.16.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "@types/node": "^12.7.5",
+    "@sindresorhus/tsconfig": "^3.0.1",
+    "@types/node": "^18.0.0",
+    "ava": "^4.3.0",
     "bindings": "^1.5.0",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.1.0",
-    "typescript": "^3.6.3"
+    "husky": "^8.0.1",
+    "np": "^7.6.1",
+    "xo": "^0.50.0"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "ava": {
+    "files": [
+      "test/**/*"
+    ]
+  },
+  "xo": {
+    "space": false
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
