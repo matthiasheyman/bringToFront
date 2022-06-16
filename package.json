@@ -1,7 +1,7 @@
 {
-  "name": "bring-to-front",
+  "name": "@matthey/bring-to-front",
   "version": "0.0.1",
-  "description": "brings window with pid to foreground",
+  "description": "Brings window with pid to foreground",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -14,9 +14,22 @@
     "prepare": "husky install"
   },
   "keywords": [],
-  "author": "",
+  "author": "Matthias Heyman",
   "license": "MIT",
   "gypfile": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matthiasheyman/bringToFront"
+  },
+  "homepage": "https://github.com/matthiasheyman/bringToFront",
+  "files": [
+    "binding.gyp",
+    "index.d.ts",
+    "index.js",
+    "src/index.cc",
+    "src/win32/pidToFront.cc",
+    "src/win32/pidToFront.h"
+  ],
   "dependencies": {
     "nan": "^2.16.0"
   },
@@ -24,13 +37,12 @@
     "@sindresorhus/tsconfig": "^3.0.1",
     "@types/node": "^18.0.0",
     "ava": "^4.3.0",
-    "bindings": "^1.5.0",
     "husky": "^8.0.1",
     "np": "^7.6.1",
     "xo": "^0.50.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=14"
   },
   "ava": {
     "files": [
